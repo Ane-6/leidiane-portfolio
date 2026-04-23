@@ -3,114 +3,123 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leidiane Macedo da Silva | Lady Cyber</title>
+  <title>Leidiane Macedo da Silva | Portfólio</title>
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-  <h1>Leidiane Macedo da Silva</h1>
+<header class="topbar">
+  <div class="container nav">
+    <div class="brand">Leidiane Macedo da Silva</div>
 
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#sobre">Sobre</a>
-    <a href="#github">GitHub</a>
-    <a href="#contato">Contato</a>
-  </nav>
+    <nav class="nav-links">
+      <a href="#inicio" class="active">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#github">GitHub</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
 </header>
 
-<main id="inicio" class="hero">
-  <section class="hero-text">
-    <span>PORTFÓLIO PROFISSIONAL</span>
+<main class="container">
 
-    <h2>Leidiane Macedo<br>da Silva</h2>
-    <h3>Estudante de Defesa Cibernética</h3>
+  <section class="hero" id="inicio">
+    <div class="hero-text">
+      <h1>Leidiane Macedo da Silva</h1>
+      <p class="subtitle">Estudante de Defesa Cibernética</p>
 
-    <p>
-      Apaixonada por tecnologia, segurança da informação e aprendizado contínuo.
-      Estou construindo minha trajetória com foco em SOC, monitoramento,
-      análise de ameaças e resposta a incidentes.
-    </p>
+      <p>
+        Apaixonada por tecnologia, segurança da informação e aprendizado contínuo.
+        Estou construindo minha trajetória com foco em SOC, monitoramento,
+        análise de ameaças e resposta a incidentes.
+      </p>
 
-    <a href="#contato" class="btn">Entrar em contato</a>
-  </section>
+      <div class="actions">
+        <a href="https://github.com/Ane-6" class="btn btn-primary" target="_blank">
+          Ver meu GitHub
+        </a>
 
-  <section class="notebook">
-    <div class="screen">
-      <div class="shield"></div>
+        <a href="#contato" class="btn btn-outline">
+          E-mail
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="projeto.png" alt="Cibersegurança">
     </div>
   </section>
+
+  <section class="grid-two">
+
+    <article class="panel" id="sobre">
+      <h2>Sobre mim</h2>
+
+      <p>
+        Sou estudante de Defesa Cibernética com foco em Security Operations Center (SOC),
+        monitoramento de eventos, análise de ameaças e resposta a incidentes. Estou em
+        constante evolução, buscando desenvolver uma base sólida na área de segurança da
+        informação e adquirir experiência prática no cenário real de cibersegurança.
+      </p>
+
+      <p>
+        Possuo experiência prática com ferramentas como Nmap, Wireshark e ambientes Linux,
+        além de conhecimentos em redes, análise de tráfego e ambientes virtualizados para
+        testes e simulações de segurança.
+      </p>
+
+      <p>
+        Meu objetivo é crescer profissionalmente na área de cibersegurança, atuar com
+        monitoramento e defesa de sistemas, e contribuir para a proteção de ambientes
+        digitais cada vez mais seguros e resilientes.
+      </p>
+    </article>
+
+    <article class="panel" id="github">
+      <h2>GitHub</h2>
+
+      <p>
+        No meu GitHub compartilho projetos práticos, laboratórios e estudos voltados à
+        cibersegurança, com foco em análise de rede, testes controlados e desenvolvimento
+        de scripts para automação e aprendizado técnico.
+      </p>
+
+      <a class="btn btn-primary" href="https://github.com/Ane-6" target="_blank">
+        Acessar meu GitHub
+      </a>
+    </article>
+
+  </section>
+
+  <section class="panel contact-section" id="contato">
+    <h2>Contato</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <span class="icon">✉</span>
+        <p>leidianemacedo66@gmail.com</p>
+      </div>
+
+      <div class="contact-card">
+        <span class="icon">✉</span>
+        <p>ladyycyber@gmail.com</p>
+      </div>
+
+      <div class="contact-card">
+        <span class="icon">☎</span>
+        <p>(65) 9.9237-9216</p>
+      </div>
+
+    </div>
+  </section>
+
 </main>
 
-<section id="sobre" class="card about">
-  <div class="avatar">
-    <div class="hair"></div>
-    <div class="head"></div>
-    <div class="body"></div>
-  </div>
-
-  <div class="content">
-    <h2>Sobre mim</h2>
-
-    <div class="item">
-      <span>◎</span>
-      <p>Sou estudante de Defesa Cibernética com foco em SOC, monitoramento, análise de ameaças e resposta a incidentes.</p>
-    </div>
-
-    <div class="item">
-      <span>⌨</span>
-      <p>Tenho experiência prática com ferramentas como Nmap, Wireshark, Linux e ambientes de virtualização.</p>
-    </div>
-
-    <div class="item">
-      <span>♡</span>
-      <p>Meu objetivo é crescer profissionalmente na área de cibersegurança e contribuir para ambientes digitais mais seguros.</p>
-    </div>
-  </div>
-</section>
-
-<section id="github" class="card github">
-  <div class="github-icon"></div>
-
-  <div>
-    <h2>GitHub</h2>
-    <p>
-      Repositório com estudos, scripts, testes práticos e evolução técnica
-      na área de cibersegurança.
-    </p>
-
-    <a href="https://github.com/Ane-6" target="_blank" class="outline-btn">
-      Acessar meu GitHub
-    </a>
-  </div>
-</section>
-
-<section id="contato" class="contact">
-  <h2>Contato</h2>
-
-  <div class="contact-grid">
-    <div class="contact-card">
-      <span>✉</span>
-      <h3>E-mail principal</h3>
-      <p>leidianemacedo66@gmail.com</p>
-    </div>
-
-    <div class="contact-card">
-      <span>✉</span>
-      <h3>E-mail secundário</h3>
-      <p>ladyycyber@gmail.com</p>
-    </div>
-
-    <div class="contact-card">
-      <span>☎</span>
-      <h3>Telefone</h3>
-      <p>(65) 9.9237-9216</p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  © 2026 Leidiane Macedo da Silva | Lady Cyber 
+<footer class="footer">
+  © 2026 Leidiane Macedo da Silva | Lady Cyber
 </footer>
 
 </body>
