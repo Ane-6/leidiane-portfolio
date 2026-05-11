@@ -48,7 +48,7 @@ img {
 .topbar {
   position: sticky;
   top: 0;
-  z-index: 30;
+  z-index: 999;
   background: #000000;
   border-bottom: 1px solid #ec268f;
 }
@@ -264,7 +264,17 @@ h1 {
   color: #ffffff;
 }
 
+/* CORREÇÃO ÂNCORAS MENU */
+
+#inicio,
+#sobre,
+#projetos,
+#contato {
+  scroll-margin-top: 120px;
+}
+
 @media (max-width: 900px) {
+
   .hero,
   .grid-two,
   .contact-grid {
@@ -284,9 +294,17 @@ h1 {
   .contact-section h2 {
     font-size: 28px;
   }
+
+  #inicio,
+  #sobre,
+  #projetos,
+  #contato {
+    scroll-margin-top: 170px;
+  }
 }
 
 @media (max-width: 640px) {
+
   h1 {
     font-size: 38px;
   }
@@ -304,5 +322,15 @@ h1 {
 
   .brand {
     font-size: 0.95rem;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 10px 14px;
   }
 }
