@@ -1,12 +1,12 @@
 :root {
-  --bg: #050505;
-  --card: rgba(18, 18, 18, 0.92);
-  --card-border: rgba(126, 21, 76, 0.45);
-  --text: #f7f1f4;
-  --muted: #c79aad;
-  --primary: #9b1458;
-  --primary-strong: #6f0e3f;
-  --shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+  --bg: #000000;
+  --card: #050505;
+  --card-border: #ec268f;
+  --text: #ffffff;
+  --muted: #ffffff;
+  --primary: #ec268f;
+  --primary-strong: #d91d7f;
+  --shadow: none;
   --radius-xl: 26px;
   --max-width: 1220px;
 }
@@ -23,12 +23,9 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background:
-    radial-gradient(circle at top left, rgba(126, 21, 76, 0.22), transparent 28%),
-    radial-gradient(circle at top right, rgba(80, 10, 45, 0.18), transparent 24%),
-    linear-gradient(180deg, #12030a 0%, var(--bg) 42%, #020202 100%);
+  background: #000000;
   color: var(--text);
-  line-height: 1.6;
+  line-height: 1.7;
   min-height: 100vh;
 }
 
@@ -52,9 +49,8 @@ img {
   position: sticky;
   top: 0;
   z-index: 30;
-  backdrop-filter: blur(14px);
-  background: rgba(5, 5, 5, 0.88);
-  border-bottom: 1px solid rgba(126, 21, 76, 0.25);
+  background: #000000;
+  border-bottom: 1px solid #ec268f;
 }
 
 .nav {
@@ -68,7 +64,7 @@ img {
 .brand {
   font-size: 1rem;
   font-weight: 700;
-  color: #f7f1f4;
+  color: #ffffff;
 }
 
 .nav-links {
@@ -80,17 +76,16 @@ img {
 .nav-links a {
   padding: 12px 18px;
   border-radius: 14px;
-  color: var(--muted);
+  color: #ffffff;
   border: 1px solid transparent;
-  transition: 0.25s ease;
+  transition: 0.2s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: var(--text);
-  border-color: rgba(155, 20, 88, 0.65);
-  background: rgba(155, 20, 88, 0.12);
-  box-shadow: none;
+  color: #ffffff;
+  border-color: #ec268f;
+  background: rgba(236, 38, 143, 0.12);
 }
 
 main {
@@ -112,26 +107,26 @@ main {
 .hero-image {
   padding: 10px;
   border-radius: 25px;
-  border: 1px solid var(--card-border);
-  background: rgba(12, 12, 12, 0.88);
-  box-shadow: var(--shadow);
+  border: 1px solid #ec268f;
+  background: #050505;
 }
 
 h1 {
-  font-size: 48px;
+  font-size: 56px;
   line-height: 1.05;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  color: #ffffff;
 }
 
 .subtitle {
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 20px;
-  color: #c92b78;
+  color: #ec268f;
   font-weight: 700;
 }
 
 .eyebrow {
-  color: #d58aaa;
+  color: #ec268f;
   font-weight: 700;
   margin-bottom: 14px;
   font-size: 1rem;
@@ -140,7 +135,8 @@ h1 {
 .hero-text p,
 .panel p {
   text-align: justify;
-  line-height: 1.8;
+  line-height: 1.9;
+  color: #ffffff;
 }
 
 .hero-text > p:not(.eyebrow):not(.subtitle) {
@@ -155,20 +151,20 @@ h1 {
 }
 
 .panel {
-  padding: 25px;
+  padding: 30px;
   border-radius: var(--radius-xl);
-  background: var(--card);
-  border: 1px solid var(--card-border);
-  box-shadow: var(--shadow);
+  background: #050505;
+  border: 1px solid #ec268f;
 }
 
 .panel h2 {
-  margin-bottom: 14px;
-  font-size: 24px;
+  margin-bottom: 18px;
+  font-size: 38px;
+  color: #ec268f;
 }
 
 .panel p + p {
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 #projetos {
@@ -181,23 +177,22 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 22px;
+  padding: 16px 26px;
   border-radius: 16px;
   font-weight: 700;
-  border: 1px solid var(--primary);
+  border: 1px solid #ec268f;
   transition: 0.2s;
   min-height: 54px;
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
-  color: white;
-  box-shadow: none;
+  background: #ec268f;
+  color: #ffffff;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  background: #d91d7f;
 }
 
 .project-btn {
@@ -205,7 +200,13 @@ h1 {
 }
 
 .contact-section {
-  padding: 25px;
+  padding: 30px;
+}
+
+.contact-section h2 {
+  color: #ec268f;
+  font-size: 38px;
+  margin-bottom: 25px;
 }
 
 .contact-grid {
@@ -215,46 +216,48 @@ h1 {
 }
 
 .contact-card {
-  padding: 20px;
+  padding: 24px;
   display: flex;
   gap: 15px;
   align-items: center;
   border-radius: var(--radius-xl);
-  background: var(--card);
-  border: 1px solid var(--card-border);
+  background: #050505;
+  border: 1px solid #ec268f;
 }
 
 .icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(135deg, var(--primary), var(--primary-strong));
-  color: white;
+  background: #ec268f;
   flex-shrink: 0;
-  box-shadow: none;
 }
 
 .contact-card h3 {
   margin-bottom: 5px;
-  color: var(--text);
+  color: #ffffff;
+  font-size: 22px;
 }
 
 .contact-card a {
-  color: var(--muted);
+  color: #ffffff;
   word-break: break-word;
 }
 
 .contact-card a:hover {
-  color: #ffffff;
+  color: #ec268f;
 }
 
 .footer {
   text-align: center;
-  padding: 20px;
-  color: #c79aad;
-  border-top: 1px solid rgba(126, 21, 76, 0.28);
+  padding: 30px 0;
+  color: #ffffff;
+  border-top: 1px solid #ec268f;
+  margin-top: 30px;
+}
+
+.footer p {
+  color: #ffffff;
 }
 
 @media (max-width: 900px) {
@@ -268,6 +271,15 @@ h1 {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  h1 {
+    font-size: 44px;
+  }
+
+  .panel h2,
+  .contact-section h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 640px) {
@@ -279,5 +291,10 @@ h1 {
   .panel,
   .contact-section {
     padding: 22px;
+  }
+
+  .contact-card {
+    flex-direction: row;
+    align-items: center;
   }
 }
