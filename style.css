@@ -1,12 +1,12 @@
 :root {
-  --bg: #140d25;
+  --bg: #050505;
   --card: rgba(255, 255, 255, 0.04);
-  --card-border: rgba(193, 132, 255, 0.14);
-  --text: #f5ecff;
-  --muted: #d2c1ee;
-  --primary: #b56cff;
-  --primary-strong: #8c45dd;
-  --shadow: 0 18px 45px rgba(0, 0, 0, 0.35);
+  --card-border: rgba(255, 0, 140, 0.22);
+  --text: #fff4fa;
+  --muted: #f3b8d7;
+  --primary: #ff008c;
+  --primary-strong: #b80063;
+  --shadow: 0 18px 45px rgba(255, 0, 140, 0.12);
   --radius-xl: 26px;
   --max-width: 1220px;
 }
@@ -24,9 +24,9 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(181, 108, 255, 0.18), transparent 30%),
-    radial-gradient(circle at top right, rgba(181, 108, 255, 0.12), transparent 25%),
-    linear-gradient(180deg, #2a174d 0%, var(--bg) 42%, #120b22 100%);
+    radial-gradient(circle at top left, rgba(255, 0, 140, 0.20), transparent 30%),
+    radial-gradient(circle at top right, rgba(255, 0, 140, 0.14), transparent 25%),
+    linear-gradient(180deg, #16000d 0%, var(--bg) 42%, #090005 100%);
   color: var(--text);
   line-height: 1.6;
   min-height: 100vh;
@@ -53,8 +53,8 @@ img {
   top: 0;
   z-index: 30;
   backdrop-filter: blur(14px);
-  background: rgba(16, 10, 31, 0.65);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(5, 5, 5, 0.78);
+  border-bottom: 1px solid rgba(255, 0, 140, 0.12);
 }
 
 .nav {
@@ -68,7 +68,7 @@ img {
 .brand {
   font-size: 1rem;
   font-weight: 700;
-  color: #f3e5ff;
+  color: #fff4fa;
 }
 
 .nav-links {
@@ -88,8 +88,9 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
   color: var(--text);
-  border-color: rgba(181, 108, 255, 0.45);
-  background: rgba(181, 108, 255, 0.08);
+  border-color: rgba(255, 0, 140, 0.55);
+  background: rgba(255, 0, 140, 0.10);
+  box-shadow: 0 0 18px rgba(255, 0, 140, 0.18);
 }
 
 main {
@@ -112,7 +113,8 @@ main {
   padding: 10px;
   border-radius: 25px;
   border: 1px solid var(--card-border);
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 0, 140, 0.04);
+  box-shadow: 0 0 28px rgba(255, 0, 140, 0.10);
 }
 
 h1 {
@@ -124,12 +126,12 @@ h1 {
 .subtitle {
   font-size: 20px;
   margin-bottom: 20px;
-  color: #e0cfff;
+  color: #ff8ac8;
   font-weight: 700;
 }
 
 .eyebrow {
-  color: #e6d6ff;
+  color: #ffb3d9;
   font-weight: 700;
   margin-bottom: 14px;
   font-size: 1rem;
@@ -190,10 +192,12 @@ h1 {
 .btn-primary {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
   color: white;
+  box-shadow: 0 0 22px rgba(255, 0, 140, 0.28);
 }
 
 .btn:hover {
   transform: translateY(-2px);
+  box-shadow: 0 0 28px rgba(255, 0, 140, 0.38);
 }
 
 .project-btn {
@@ -229,6 +233,7 @@ h1 {
   background: linear-gradient(135deg, var(--primary), var(--primary-strong));
   color: white;
   flex-shrink: 0;
+  box-shadow: 0 0 18px rgba(255, 0, 140, 0.30);
 }
 
 .contact-card h3 {
@@ -248,8 +253,8 @@ h1 {
 .footer {
   text-align: center;
   padding: 20px;
-  color: #cbb4ec;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #f3b8d7;
+  border-top: 1px solid rgba(255, 0, 140, 0.14);
 }
 
 @media (max-width: 900px) {
