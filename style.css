@@ -1,11 +1,11 @@
 :root {
-  --bg: #000000;
-  --card: #050505;
-  --card-border: #ec268f;
+  --bg: #050008;
+  --card: #0b0612;
+  --card-border: #ff008c;
   --text: #ffffff;
-  --muted: #ffffff;
-  --primary: #ec268f;
-  --primary-strong: #d91d7f;
+  --muted: #d7d7d7;
+  --primary: #ff008c;
+  --primary-strong: #d10074;
   --shadow: none;
   --radius-xl: 26px;
   --max-width: 1220px;
@@ -23,7 +23,7 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #000000;
+  background: var(--bg);
   color: var(--text);
   line-height: 1.7;
   min-height: 100vh;
@@ -49,8 +49,9 @@ img {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #000000;
-  border-bottom: 1px solid #ec268f;
+  background: rgba(5, 0, 8, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 0, 140, 0.45);
 }
 
 .nav {
@@ -64,7 +65,7 @@ img {
 .brand {
   font-size: 1rem;
   font-weight: 700;
-  color: #ec268f;
+  color: var(--primary);
 }
 
 .nav-links {
@@ -76,26 +77,26 @@ img {
 .nav-links a {
   padding: 12px 18px;
   border-radius: 14px;
-  color: #ffffff;
+  color: var(--text);
   border: 1px solid transparent;
-  transition: 0.2s ease;
+  transition: 0.25s ease;
 }
 
 .nav-links a:hover,
 .nav-links a.active {
-  color: #ffffff;
-  border-color: #ec268f;
-  background: rgba(236, 38, 143, 0.12);
+  border-color: rgba(255, 0, 140, 0.7);
+  background: rgba(255, 0, 140, 0.12);
+  color: var(--primary);
 }
 
 main {
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 30px;
+  gap: 40px;
   align-items: center;
   margin-bottom: 35px;
 }
@@ -105,29 +106,36 @@ main {
 }
 
 .hero-image {
-  padding: 10px;
-  border-radius: 25px;
-  border: 1px solid #ec268f;
-  background: #050505;
+  padding: 18px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 0, 140, 0.35);
+  background: var(--card);
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 18px;
 }
 
 h1 {
-  font-size: 62px;
+  font-size: 68px;
   line-height: 1.05;
-  margin-bottom: 16px;
-  color: #ec268f;
+  margin-bottom: 18px;
+  color: var(--primary);
   font-weight: 800;
 }
 
 .subtitle {
   font-size: 24px;
-  margin-bottom: 22px;
-  color: #ffffff;
+  margin-bottom: 24px;
+  color: var(--text);
   font-weight: 700;
 }
 
 .eyebrow {
-  color: #ec268f;
+  color: var(--primary);
   font-weight: 700;
   margin-bottom: 16px;
   font-size: 1.1rem;
@@ -137,7 +145,7 @@ h1 {
 .panel p {
   text-align: justify;
   line-height: 1.9;
-  color: #ffffff;
+  color: var(--text);
   font-size: 1rem;
 }
 
@@ -153,16 +161,16 @@ h1 {
 }
 
 .panel {
-  padding: 30px;
+  padding: 32px;
   border-radius: var(--radius-xl);
-  background: #050505;
-  border: 1px solid #ec268f;
+  background: var(--card);
+  border: 1px solid rgba(255, 0, 140, 0.35);
 }
 
 .panel h2 {
   margin-bottom: 18px;
   font-size: 34px;
-  color: #ec268f;
+  color: var(--primary);
   font-weight: 800;
 }
 
@@ -183,19 +191,20 @@ h1 {
   padding: 16px 26px;
   border-radius: 16px;
   font-weight: 700;
-  border: 1px solid #ec268f;
-  transition: 0.2s;
+  border: 1px solid var(--primary);
+  transition: 0.25s ease;
   min-height: 54px;
 }
 
 .btn-primary {
-  background: #ec268f;
+  background: var(--primary);
   color: #ffffff;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  background: #d91d7f;
+  background: var(--primary-strong);
+  border-color: var(--primary-strong);
 }
 
 .project-btn {
@@ -203,11 +212,14 @@ h1 {
 }
 
 .contact-section {
-  padding: 30px;
+  padding: 32px;
+  background: var(--card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 0, 140, 0.35);
 }
 
 .contact-section h2 {
-  color: #ec268f;
+  color: var(--primary);
   font-size: 34px;
   margin-bottom: 25px;
   font-weight: 800;
@@ -224,44 +236,42 @@ h1 {
   display: flex;
   gap: 15px;
   align-items: center;
-  border-radius: var(--radius-xl);
-  background: #050505;
-  border: 1px solid #ec268f;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 0, 140, 0.25);
+  transition: 0.25s ease;
 }
 
-.icon {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: #ec268f;
-  flex-shrink: 0;
+.contact-card:hover {
+  border-color: rgba(255, 0, 140, 0.6);
+  transform: translateY(-2px);
 }
 
 .contact-card h3 {
   margin-bottom: 5px;
-  color: #ffffff;
+  color: var(--text);
   font-size: 20px;
 }
 
 .contact-card a {
-  color: #ffffff;
+  color: var(--muted);
   word-break: break-word;
 }
 
 .contact-card a:hover {
-  color: #ec268f;
+  color: var(--primary);
 }
 
 .footer {
   text-align: center;
   padding: 30px 0;
-  color: #ffffff;
-  border-top: 1px solid #ec268f;
+  color: var(--muted);
+  border-top: 1px solid rgba(255, 0, 140, 0.35);
   margin-top: 35px;
 }
 
 .footer p {
-  color: #ffffff;
+  color: var(--muted);
 }
 
 #inicio,
@@ -284,7 +294,7 @@ h1 {
   }
 
   h1 {
-    font-size: 46px;
+    font-size: 48px;
   }
 
   .panel h2,
@@ -328,5 +338,9 @@ h1 {
   .nav-links a {
     font-size: 0.9rem;
     padding: 10px 14px;
+  }
+
+  .hero-image img {
+    max-width: 320px;
   }
 }
