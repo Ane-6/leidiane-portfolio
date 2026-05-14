@@ -1,12 +1,11 @@
 :root {
   --bg: #000000;
-  --card: #050505;
-  --card-strong: #080808;
+  --card: #000000;
 
-  /* ROSA DA IMAGEM */
-  --primary: #ff008c;
-  --primary-hover: #e0007b;
-  --border: rgba(255, 0, 140, 0.55);
+  /* ROSA OFICIAL DA LOGO */
+  --primary: #f20b79;
+  --primary-hover: #c90661;
+  --border: rgba(242, 11, 121, 0.55);
 
   --text: #ffffff;
   --muted: #d8d8d8;
@@ -89,7 +88,7 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
   border-color: var(--border);
-  background: rgba(255, 0, 140, 0.10);
+  background: rgba(242, 11, 121, 0.10);
   color: #ffffff;
 }
 
