@@ -3,9 +3,10 @@
   --card: #000000;
 
   /* ROSA OFICIAL DA LOGO */
-  --primary: #f20b79;
-  --primary-hover: #c90661;
-  --border: rgba(242, 11, 121, 0.55);
+  --primary: #F2116C;
+  --primary-hover: #D90F61;
+  --border: rgba(242, 17, 108, 0.55);
+  --primary-soft: rgba(242, 17, 108, 0.10);
 
   --text: #ffffff;
   --muted: #d8d8d8;
@@ -53,7 +54,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #000000;
+  background: var(--bg);
   border-bottom: 1px solid var(--border);
 }
 
@@ -68,7 +69,7 @@ img {
 .brand {
   font-size: 1rem;
   font-weight: 700;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .nav-links {
@@ -80,7 +81,7 @@ img {
 .nav-links a {
   padding: 12px 18px;
   border-radius: 14px;
-  color: #ffffff;
+  color: var(--text);
   border: 1px solid transparent;
   transition: 0.2s ease;
 }
@@ -88,8 +89,8 @@ img {
 .nav-links a:hover,
 .nav-links a.active {
   border-color: var(--border);
-  background: rgba(242, 11, 121, 0.10);
-  color: #ffffff;
+  background: var(--primary-soft);
+  color: var(--text);
 }
 
 /* MAIN */
@@ -113,7 +114,7 @@ main {
 }
 
 .eyebrow {
-  color: #ffffff;
+  color: var(--text);
   font-weight: 700;
   margin-bottom: 16px;
   font-size: 1.05rem;
@@ -131,18 +132,18 @@ h1 {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 24px;
-  color: #ffffff;
+  color: var(--text);
 }
 
 .hero-text p,
 .panel p {
   text-align: justify;
-  color: #ffffff;
+  color: var(--text);
   line-height: 1.9;
 }
 
 .hero-image {
-  background: #000000;
+  background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   padding: 22px;
@@ -167,7 +168,7 @@ h1 {
 }
 
 .panel {
-  background: #000000;
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   padding: 30px;
@@ -199,7 +200,7 @@ h1 {
 
 .btn-primary {
   background: var(--primary);
-  color: #ffffff;
+  color: var(--text);
 }
 
 .btn-primary:hover {
@@ -214,7 +215,7 @@ h1 {
 /* CONTATOS */
 
 .contact-section {
-  background: #000000;
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: var(--radius-xl);
   padding: 30px;
@@ -234,7 +235,7 @@ h1 {
 }
 
 .contact-card {
-  background: #000000;
+  background: var(--card);
   border: 1px solid var(--border);
   border-radius: 22px;
   padding: 24px;
@@ -258,7 +259,7 @@ h1 {
 }
 
 .contact-card a {
-  color: #ffffff;
+  color: var(--text);
   word-break: break-word;
 }
 
@@ -276,7 +277,7 @@ h1 {
 }
 
 .footer p {
-  color: #ffffff;
+  color: var(--text);
 }
 
 /* SCROLL */
