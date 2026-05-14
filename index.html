@@ -13,8 +13,8 @@
   >
 
   <!-- FAVICON -->
-  <link rel="icon" type="image/png" sizes="512x512" href="logo.png">
-  <link rel="apple-touch-icon" sizes="512x512" href="logo.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="512x512" href="favicon.png">
 
   <link rel="stylesheet" href="style.css">
 </head>
@@ -22,17 +22,11 @@
 <body>
 
   <header class="topbar">
+
     <div class="container nav">
 
       <div class="brand">
-
-        <!-- LOGO -->
-        <img src="logo.png" alt="Logo Lady Cyber" class="logo">
-
-        <span>
-          Leidiane Macedo da Silva
-        </span>
-
+        Leidiane Macedo da Silva
       </div>
 
       <nav class="nav-links">
@@ -43,6 +37,7 @@
       </nav>
 
     </div>
+
   </header>
 
   <main class="container">
@@ -72,7 +67,10 @@
       </div>
 
       <div class="hero-image">
+
+        <!-- LOGO PRINCIPAL DO SITE -->
         <img src="projeto.png" alt="Lady Cyber">
+
       </div>
 
     </section>
@@ -131,11 +129,13 @@
         <div class="contact-card">
 
           <div>
+
             <h3>E-mail principal</h3>
 
             <a href="mailto:ladyycyber@gmail.com">
               ladyycyber@gmail.com
             </a>
+
           </div>
 
         </div>
@@ -143,6 +143,7 @@
         <div class="contact-card">
 
           <div>
+
             <h3>Instagram</h3>
 
             <a
@@ -152,6 +153,7 @@
             >
               @ladycyber_
             </a>
+
           </div>
 
         </div>
@@ -159,11 +161,13 @@
         <div class="contact-card">
 
           <div>
+
             <h3>Telefone</h3>
 
             <a href="tel:+5565992379216">
               (65) 9.9237-9216
             </a>
+
           </div>
 
         </div>
@@ -179,6 +183,7 @@
   </footer>
 
   <script>
+
     const sections = document.querySelectorAll("section[id], article[id]");
     const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -187,21 +192,28 @@
     }
 
     navLinks.forEach(link => {
+
       link.addEventListener("click", function () {
+
         removeActive();
         this.classList.add("active");
+
       });
+
     });
 
     window.addEventListener("scroll", () => {
+
       let current = "";
 
       sections.forEach(section => {
+
         const sectionTop = section.offsetTop - 160;
 
         if (window.scrollY >= sectionTop) {
           current = section.getAttribute("id");
         }
+
       });
 
       removeActive();
@@ -211,7 +223,9 @@
       if (activeLink) {
         activeLink.classList.add("active");
       }
+
     });
+
   </script>
 
 </body>
