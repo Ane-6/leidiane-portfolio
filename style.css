@@ -1,11 +1,11 @@
 :root {
-  --bg: #050008;
-  --card: #0b0612;
-  --card-border: #ff008c;
+  --bg: #000000;
+  --card: #050008;
+  --card-border: #ff007f;
   --text: #ffffff;
   --muted: #d7d7d7;
-  --primary: #ff008c;
-  --primary-strong: #d10074;
+  --primary: #ff007f;
+  --primary-strong: #d1006b;
   --shadow: none;
   --radius-xl: 26px;
   --max-width: 1220px;
@@ -49,9 +49,8 @@ img {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: rgba(5, 0, 8, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255, 0, 140, 0.45);
+  background: #000000;
+  border-bottom: 1px solid rgba(255, 0, 127, 0.45);
 }
 
 .nav {
@@ -84,8 +83,8 @@ img {
 
 .nav-links a:hover,
 .nav-links a.active {
-  border-color: rgba(255, 0, 140, 0.7);
-  background: rgba(255, 0, 140, 0.12);
+  border-color: rgba(255, 0, 127, 0.7);
+  background: rgba(255, 0, 127, 0.10);
   color: var(--primary);
 }
 
@@ -106,17 +105,21 @@ main {
 }
 
 .hero-image {
-  padding: 18px;
+  padding: 8px;
   border-radius: 28px;
-  border: 1px solid rgba(255, 0, 140, 0.35);
-  background: var(--card);
+  border: 1px solid rgba(255, 0, 127, 0.35);
+  background: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-image img {
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-  border-radius: 18px;
+  width: 78%;
+  max-width: 420px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0;
 }
 
 h1 {
@@ -135,7 +138,7 @@ h1 {
 }
 
 .eyebrow {
-  color: var(--primary);
+  color: var(--text);
   font-weight: 700;
   margin-bottom: 16px;
   font-size: 1.1rem;
@@ -164,7 +167,7 @@ h1 {
   padding: 32px;
   border-radius: var(--radius-xl);
   background: var(--card);
-  border: 1px solid rgba(255, 0, 140, 0.35);
+  border: 1px solid rgba(255, 0, 127, 0.35);
 }
 
 .panel h2 {
@@ -215,7 +218,7 @@ h1 {
   padding: 32px;
   background: var(--card);
   border-radius: var(--radius-xl);
-  border: 1px solid rgba(255, 0, 140, 0.35);
+  border: 1px solid rgba(255, 0, 127, 0.35);
 }
 
 .contact-section h2 {
@@ -237,14 +240,23 @@ h1 {
   gap: 15px;
   align-items: center;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 0, 140, 0.25);
+  background: #050008;
+  border: 1px solid rgba(255, 0, 127, 0.25);
   transition: 0.25s ease;
 }
 
 .contact-card:hover {
-  border-color: rgba(255, 0, 140, 0.6);
+  border-color: rgba(255, 0, 127, 0.6);
   transform: translateY(-2px);
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--primary);
+  flex-shrink: 0;
+  box-shadow: 0 0 10px rgba(255, 0, 127, 0.55);
 }
 
 .contact-card h3 {
@@ -266,7 +278,7 @@ h1 {
   text-align: center;
   padding: 30px 0;
   color: var(--muted);
-  border-top: 1px solid rgba(255, 0, 140, 0.35);
+  border-top: 1px solid rgba(255, 0, 127, 0.35);
   margin-top: 35px;
 }
 
