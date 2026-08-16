@@ -299,6 +299,16 @@ h1 {
   color: var(--text);
 
   line-height: 1.9;
+
+  text-align: justify;
+  text-align-last: left;
+  text-justify: inter-word;
+
+  hyphens: auto;
+  -webkit-hyphens: auto;
+
+  word-spacing: normal;
+  overflow-wrap: break-word;
 }
 
 .panel p + p {
@@ -1712,10 +1722,15 @@ button:focus-visible {
   #profile-description,
   #specialty-description,
   .result-explanation p {
-    text-align: left;
-    text-align-last: auto;
+    text-align: justify;
+    text-align-last: left;
+    text-justify: inter-word;
 
-    hyphens: none;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+
+    word-spacing: normal;
+    overflow-wrap: break-word;
   }
 
 
@@ -2108,71 +2123,60 @@ button:focus-visible {
 }
 
 /* =========================================================
-   AJUSTE FINAL — TEXTOS JUSTIFICADOS
-   PRESERVA TODO O DESIGN ORIGINAL
+   AJUSTE DEFINITIVO — TEXTOS JUSTIFICADOS
+   DESKTOP + TABLET + MOBILE
+   PRESERVA O DESIGN ORIGINAL
 ========================================================= */
 
-/* HOME — SOBRE, PROJETOS E CARREIRA */
-
-.content-text,
-.panel p,
-#carreira p {
-  text-align: justify;
-  text-align-last: left;
-
-  hyphens: auto;
-  -webkit-hyphens: auto;
-
-  word-spacing: normal;
-  overflow-wrap: break-word;
-}
-
-
-/* PÁGINA DO TESTE — TEXTOS PRINCIPAIS */
-
-.carreira-intro p,
+.hero-text > p:not(.eyebrow):not(.subtitle),
+#sobre p,
+#projetos p,
+#carreira p,
+.carreira-intro > p:not(.eyebrow),
 .identification-description,
+.consent-note,
+.quiz-instruction,
 #profile-description,
 #specialty-description,
 .result-explanation p,
 .result-info p,
-.result-delivery-info p {
-  text-align: justify;
-  text-align-last: left;
+.result-delivery-info p,
+.quiz-disclaimer p {
+  text-align: justify !important;
+  text-align-last: left !important;
+  text-justify: inter-word !important;
 
-  hyphens: auto;
-  -webkit-hyphens: auto;
+  hyphens: auto !important;
+  -webkit-hyphens: auto !important;
 
-  word-spacing: normal;
+  word-spacing: normal !important;
   overflow-wrap: break-word;
 }
 
-
-/* =========================================================
-   MOBILE — MANTER TEXTOS JUSTIFICADOS
-========================================================= */
-
 @media (max-width: 640px) {
 
-  .content-text,
-  .hero-text p,
-  .panel p,
+  .hero-text > p:not(.eyebrow):not(.subtitle),
+  #sobre p,
+  #projetos p,
   #carreira p,
-  .carreira-intro p,
+  .carreira-intro > p:not(.eyebrow),
   .identification-description,
+  .consent-note,
+  .quiz-instruction,
   #profile-description,
   #specialty-description,
   .result-explanation p,
   .result-info p,
-  .result-delivery-info p {
-    text-align: justify;
-    text-align-last: left;
+  .result-delivery-info p,
+  .quiz-disclaimer p {
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: inter-word !important;
 
-    hyphens: auto;
-    -webkit-hyphens: auto;
+    hyphens: auto !important;
+    -webkit-hyphens: auto !important;
 
-    word-spacing: normal;
+    word-spacing: normal !important;
     overflow-wrap: break-word;
   }
-
 }

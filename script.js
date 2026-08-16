@@ -2,185 +2,181 @@
 
 /* =========================================================
    LADY CYBER
-   NAVEGAÇÃO DO PORTFÓLIO
+   NAVEGAÇÃO PRINCIPAL
 ========================================================= */
 
-document.addEventListener("DOMContentLoaded", function () {
-
-  /* =======================================================
-     ELEMENTOS
-  ======================================================= */
+document.addEventListener("DOMContentLoaded", () => {
 
   const navLinks =
-    document.querySelectorAll(".nav-link[data-section]");
+    document.querySelectorAll(".nav-links a");
 
-  const sections =
-    document.querySelectorAll("[data-nav-section]");
+  if (!navLinks.length) {
+    return;
+  }
 
 
   /* =======================================================
-     REMOVER ACTIVE
+     REMOVER BOTÃO ATIVO
   ======================================================= */
 
   function removeActive() {
 
-    navLinks.forEach(function (link) {
+    navLinks.forEach((link) => {
+
       link.classList.remove("active");
+      link.removeAttribute("aria-current");
+
     });
 
   }
 
 
   /* =======================================================
-     DEFINIR ITEM ATIVO
+     ATIVAR BOTÃO CORRETO
   ======================================================= */
 
-  function setActive(sectionId) {
+  function activateLink(link) {
+
+    if (!link) {
+      return;
+    }
 
     removeActive();
 
-    const activeLink =
-      document.querySelector(
-        `.nav-link[data-section="${sectionId}"]`
-      );
+    link.classList.add("active");
 
-    if (activeLink) {
-      activeLink.classList.add("active");
-    }
+    link.setAttribute(
+      "aria-current",
+      "location"
+    );
 
   }
 
 
   /* =======================================================
-     CLIQUE NO MENU
+     CLIQUE NOS BOTÕES
   ======================================================= */
 
-  navLinks.forEach(function (link) {
+  navLinks.forEach((link) => {
 
-    link.addEventListener("click", function () {
+    const href =
+      link.getAttribute("href");
 
-      const sectionId =
-        this.dataset.section;
+    /*
+      Somente links internos da página principal.
+    */
 
-      if (!sectionId) {
-        return;
+    if (
+      !href ||
+      !href.startsWith("#")
+    ) {
+      return;
+    }
+
+
+    link.addEventListener(
+      "click",
+      (event) => {
+
+        const target =
+          document.querySelector(href);
+
+        if (!target) {
+          return;
+        }
+
+        event.preventDefault();
+
+
+        /*
+          Ativa EXATAMENTE o botão clicado.
+        */
+
+        activateLink(link);
+
+
+        /*
+          Atualiza a URL.
+        */
+
+        history.replaceState(
+          null,
+          "",
+          href
+        );
+
+
+        /*
+          Respeita a altura do menu fixo.
+        */
+
+        const topbar =
+          document.querySelector(".topbar");
+
+        const menuHeight =
+          topbar
+            ? topbar.offsetHeight
+            : 0;
+
+
+        const targetPosition =
+          target.getBoundingClientRect().top +
+          window.scrollY -
+          menuHeight -
+          20;
+
+
+        window.scrollTo({
+          top: Math.max(
+            0,
+            targetPosition
+          ),
+          behavior: "smooth"
+        });
+
       }
-
-      setActive(sectionId);
-
-    });
+    );
 
   });
 
 
   /* =======================================================
-     DETECTAR SEÇÃO DURANTE O SCROLL
+     BOTÃO CORRETO AO ABRIR URL COM #
   ======================================================= */
 
-  function updateActiveSection() {
+  const currentHash =
+    window.location.hash;
 
-    const scrollPosition =
-      window.scrollY + 180;
+  if (currentHash) {
 
-    let currentSection =
-      "inicio";
-
-
-    sections.forEach(function (section) {
-
-      const sectionTop =
-        section.offsetTop;
-
-      if (scrollPosition >= sectionTop) {
-
-        currentSection =
-          section.dataset.navSection;
-
-      }
-
-    });
-
-
-    /*
-      CORREÇÃO PARA O FINAL DA PÁGINA
-
-      Quando o usuário chegar próximo ao final,
-      Contatos será considerado ativo.
-    */
-
-    const pageBottom =
-      window.innerHeight +
-      window.scrollY;
-
-    const documentHeight =
-      document.documentElement.scrollHeight;
-
-
-    if (
-      pageBottom >=
-      documentHeight - 50
-    ) {
-
-      const contactSection =
-        document.querySelector(
-          '[data-nav-section="contato"]'
-        );
-
-      if (contactSection) {
-        currentSection = "contato";
-      }
-
-    }
-
-
-    setActive(currentSection);
-
-  }
-
-
-  /* =======================================================
-     EVENTO DE SCROLL
-  ======================================================= */
-
-  window.addEventListener(
-    "scroll",
-    updateActiveSection,
-    {
-      passive: true
-    }
-  );
-
-
-  /* =======================================================
-     ESTADO INICIAL
-  ======================================================= */
-
-  function setInitialActive() {
-
-    const hash =
-      window.location.hash.replace("#", "");
-
-
-    const validHash =
-      hash &&
+    const currentLink =
       document.querySelector(
-        `[data-nav-section="${hash}"]`
+        `.nav-links a[href="${currentHash}"]`
       );
 
+    if (currentLink) {
 
-    if (validHash) {
+      activateLink(currentLink);
 
-      setActive(hash);
-
-    } else {
-
-      updateActiveSection();
-
+      return;
     }
 
   }
 
 
-  setInitialActive();
+  /* =======================================================
+     PADRÃO — INÍCIO
+  ======================================================= */
+
+  const homeLink =
+    document.querySelector(
+      '.nav-links a[href="#inicio"]'
+    );
+
+  if (homeLink) {
+
+    activateLink(homeLink);
+
+  }
 
 });
