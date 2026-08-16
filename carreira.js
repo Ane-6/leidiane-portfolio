@@ -20,6 +20,18 @@ const SPECIALTY_KEYS = [
 "redTeam",
 "appsec"
 ];
+const SPECIALTY_EMAIL_NAMES = {
+  grc: "GRC",
+  iam: "IAM",
+  cloud: "Cloud Security",
+  devsecops: "DevSecOps",
+  forense: "Forense Digital",
+  blueTeam: "Blue Team",
+  incidentResponse: "Resposta a Incidentes",
+  malware: "Análise de Malware",
+  redTeam: "Red Team / Pentest",
+  appsec: "Application Security (AppSec)"
+};
 
 const profiles = {
 
