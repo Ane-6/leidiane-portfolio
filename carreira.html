@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Descubra sua Carreira em Cibersegurança | Lady Cyber</title>
+
+  <meta
+    name="description"
+    content="Teste de orientação para descobrir quais áreas da cibersegurança combinam com seu perfil."
+  >
+
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ==================================================
+       MENU
+  ================================================== -->
+
+  <header class="topbar">
+
+    <div class="container nav">
+
+      <div class="brand">
+        Leidiane Macedo
+      </div>
+
+      <nav class="nav-links">
+
+        <a href="index.html">
+          Início
+        </a>
+
+        <a href="index.html#sobre">
+          Sobre
+        </a>
+
+        <a href="index.html#projetos">
+          Projetos
+        </a>
+
+        <a href="carreira.html" class="active">
+          Descubra sua carreira
+        </a>
+
+        <a href="index.html#contato">
+          Contatos
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ==================================================
+       CONTEÚDO PRINCIPAL
+  ================================================== -->
+
+  <main class="container carreira-page">
+
+
+    <!-- ==================================================
+         INTRODUÇÃO
+    ================================================== -->
+
+    <section
+      class="panel carreira-intro"
+      id="career-intro"
+    >
+
+      <p class="eyebrow">
+        ORIENTAÇÃO DE CARREIRA
+      </p>
+
+      <h1 class="carreira-title">
+        Descubra sua carreira em Cibersegurança
+      </h1>
+
+      <p>
+        Este teste foi desenvolvido para ajudar você a conhecer melhor
+        os diferentes caminhos dentro da cibersegurança e descobrir quais
+        deles podem combinar mais com seus interesses, habilidades e forma
+        de pensar.
+      </p>
+
+      <p>
+        Ao longo das perguntas, você vai explorar diferentes situações e
+        formas de atuação — desde estratégia e gestão até investigação,
+        defesa, segurança ofensiva e áreas técnicas.
+      </p>
+
+      <p>
+        Não importa se você está começando agora, já trabalha com tecnologia,
+        atua em cibersegurança ou está buscando uma nova especialização.
+        O objetivo é ajudar você a enxergar caminhos que talvez ainda não
+        tenha considerado.
+      </p>
+
+    </section>
+
+
+    <!-- ==================================================
+         IDENTIFICAÇÃO
+    ================================================== -->
+
+    <section
+      class="panel identification-card"
+      id="identification-card"
+    >
+
+      <p class="eyebrow">
+        ANTES DE COMEÇAR
+      </p>
+
+      <h2>
+        Queremos conhecer você
+      </h2>
+
+      <p class="identification-description">
+        Preencha seus dados para iniciar o teste.
+        Ao final, seu resultado ficará vinculado ao e-mail informado.
+      </p>
+
+
+      <form
+        id="identification-form"
+        novalidate
+      >
+
+        <!-- NOME -->
+
+        <div class="form-group">
+
+          <label for="user-name">
+            Seu nome
+          </label>
+
+          <input
+            type="text"
+            id="user-name"
+            name="name"
+            autocomplete="name"
+            maxlength="100"
+            placeholder="Digite seu nome"
+            required
+          >
+
+        </div>
+
+
+        <!-- E-MAIL -->
+
+        <div class="form-group">
+
+          <label for="user-email">
+            Seu e-mail
+          </label>
+
+          <input
+            type="email"
+            id="user-email"
+            name="email"
+            autocomplete="email"
+            maxlength="150"
+            placeholder="seuemail@exemplo.com"
+            required
+          >
+
+        </div>
+
+
+        <!-- CONSENTIMENTO -->
+
+        <label class="marketing-consent">
+
+          <input
+            type="checkbox"
+            id="marketing-consent"
+            name="marketingConsent"
+          >
+
+          <span>
+            Tenho planos futuros e gostaria de receber novidades,
+            conteúdos e oportunidades relacionadas ao meu perfil
+            por e-mail.
+          </span>
+
+        </label>
+
+
+        <p class="consent-note">
+          Esta opção é voluntária. Você poderá realizar o teste
+          normalmente mesmo sem autorizar o recebimento de novidades.
+        </p>
+
+
+        <!-- MENSAGEM DE VALIDAÇÃO -->
+
+        <p
+          class="form-message"
+          id="identification-message"
+          aria-live="polite"
+        ></p>
+
+
+        <!-- BOTÃO -->
+
+        <button
+          class="btn btn-primary start-quiz-button"
+          id="start-quiz-button"
+          type="submit"
+        >
+          Começar teste
+        </button>
+
+      </form>
+
+    </section>
+
+
+    <!-- ==================================================
+         QUESTIONÁRIO
+    ================================================== -->
+
+    <section
+      class="panel quiz-card"
+      id="quiz-card"
+      hidden
+    >
+
+      <!-- CABEÇALHO -->
+
+      <div class="quiz-header">
+
+        <p
+          class="quiz-user-greeting"
+          id="quiz-user-greeting"
+        ></p>
+
+        <p class="quiz-instruction">
+          Responda às 20 perguntas com sinceridade.
+          Não existem respostas certas ou erradas.
+        </p>
+
+        <p
+          class="quiz-progress"
+          id="question-progress"
+        >
+          Pergunta 1 de 20 - 5%
+        </p>
+
+      </div>
+
+
+      <!-- BARRA DE PROGRESSO -->
+
+      <div class="progress-bar">
+
+        <div
+          class="progress-fill"
+          id="progress-fill"
+        ></div>
+
+      </div>
+
+
+      <!-- PERGUNTA -->
+
+      <div class="quiz-question">
+
+        <h2 id="question-title">
+          Carregando pergunta...
+        </h2>
+
+
+        <!-- ALTERNATIVAS -->
+
+        <div
+          class="quiz-options"
+          id="quiz-options"
+        ></div>
+
+
+        <!-- CAMPO OUTRO -->
+
+        <div
+          class="other-answer-container"
+          id="other-answer-container"
+          hidden
+        >
+
+          <label for="other-answer">
+            Escreva sua resposta:
+          </label>
+
+          <textarea
+            id="other-answer"
+            rows="4"
+            maxlength="500"
+            placeholder="Digite sua resposta aqui..."
+          ></textarea>
+
+          <div class="character-counter">
+            <span id="character-count">0</span>/500
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <!-- MENSAGEM -->
+
+      <p
+        class="quiz-message"
+        id="quiz-message"
+        aria-live="polite"
+      ></p>
+
+
+      <!-- BOTÕES -->
+
+      <div class="quiz-actions">
+
+        <button
+          class="btn quiz-back"
+          id="previous-button"
+          type="button"
+        >
+          Voltar
+        </button>
+
+        <button
+          class="btn btn-primary"
+          id="next-button"
+          type="button"
+        >
+          Próxima
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         RESULTADO
+    ================================================== -->
+
+    <section
+      class="panel result-card"
+      id="result-card"
+      hidden
+    >
+
+      <div class="profile-result">
+
+
+        <!-- TÍTULO -->
+
+        <p class="eyebrow">
+          RESULTADO DO TESTE
+        </p>
+
+
+        <!-- NOME -->
+
+        <p
+          class="result-user-name"
+          id="result-user-name"
+        ></p>
+
+
+        <!-- PERFIL PRINCIPAL -->
+
+        <p class="result-kicker">
+          Seu perfil principal:
+        </p>
+
+        <h2
+          class="result-title"
+          id="profile-title"
+        ></h2>
+
+
+        <!-- ==================================================
+             ÍNDICE DE AFINIDADE DO PERFIL
+        ================================================== -->
+
+        <div class="compatibility">
+
+          <div class="compatibility-header">
+
+            <span>
+              Índice de Afinidade
+            </span>
+
+            <strong id="profile-score"></strong>
+
+          </div>
+
+
+          <!-- CLASSIFICAÇÃO -->
+
+          <p
+            class="affinity-level"
+            id="profile-level"
+          ></p>
+
+
+          <!-- BARRA -->
+
+          <div class="compatibility-bar">
+
+            <div
+              class="compatibility-fill"
+              id="profile-score-bar"
+            ></div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             DESCRIÇÃO DO PERFIL
+        ================================================== -->
+
+        <p
+          class="result-description"
+          id="profile-description"
+        ></p>
+
+
+        <!-- ==================================================
+             CARACTERÍSTICAS
+        ================================================== -->
+
+        <div class="result-profile">
+
+          <h3>
+            Características do seu perfil
+          </h3>
+
+          <div
+            class="profile-tags"
+            id="profile-tags"
+          ></div>
+
+        </div>
+
+
+        <!-- ==================================================
+             ESPECIALIDADE PRINCIPAL
+        ================================================== -->
+
+        <div class="result-specialty">
+
+          <p class="result-section-label">
+            Especialidade com maior afinidade
+          </p>
+
+          <h3
+            class="specialty-title"
+            id="specialty-title"
+          ></h3>
+
+
+          <!-- AFINIDADE DA ESPECIALIDADE -->
+
+          <div class="compatibility">
+
+            <div class="compatibility-header">
+
+              <span>
+                Afinidade com a especialidade
+              </span>
+
+              <strong id="specialty-score"></strong>
+
+            </div>
+
+
+            <p
+              class="affinity-level"
+              id="specialty-level"
+            ></p>
+
+
+            <div class="compatibility-bar">
+
+              <div
+                class="compatibility-fill"
+                id="specialty-score-bar"
+              ></div>
+
+            </div>
+
+          </div>
+
+
+          <!-- DESCRIÇÃO -->
+
+          <p
+            class="specialty-description"
+            id="specialty-description"
+          ></p>
+
+
+          <!-- CAMINHOS -->
+
+          <div class="career-paths">
+
+            <h3>
+              Caminhos para explorar
+            </h3>
+
+            <div
+              class="career-tags"
+              id="career-tags"
+            ></div>
+
+          </div>
+
+        </div>
+
+
+        <!-- ==================================================
+             OUTRAS ÁREAS COMPATÍVEIS
+        ================================================== -->
+
+        <div class="result-secondary">
+
+          <h3>
+            Outras áreas compatíveis
+          </h3>
+
+          <div id="secondary-specialties"></div>
+
+        </div>
+
+
+        <!-- ==================================================
+             REFERÊNCIAS DE ESTUDO
+        ================================================== -->
+
+        <div class="result-references">
+
+          <h3>
+            Referências para seus estudos
+          </h3>
+
+          <div
+            class="reference-tags"
+            id="reference-tags"
+          ></div>
+
+        </div>
+
+
+        <!-- ==================================================
+             REGISTRO DO RESULTADO
+        ================================================== -->
+
+        <div class="result-delivery-info">
+
+          <h3>
+            Resultado registrado
+          </h3>
+
+          <p>
+            Este resultado está vinculado a
+            <strong id="result-email"></strong>.
+          </p>
+
+
+          <!-- DATA E HORA -->
+
+          <p class="result-date-row">
+            Teste realizado em
+            <strong id="result-date"></strong>.
+          </p>
+
+
+          <!-- CONSENTIMENTO -->
+
+          <p
+            class="marketing-status"
+            id="marketing-status"
+          ></p>
+
+        </div>
+
+
+        <!-- ==================================================
+             BOTÕES
+        ================================================== -->
+
+        <div class="result-actions">
+
+          <button
+            class="btn btn-primary result-action-button"
+            id="restart-button"
+            type="button"
+          >
+            Refazer teste
+          </button>
+
+
+          <a
+            class="btn result-home result-action-button"
+            href="index.html"
+          >
+            Voltar ao início
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ==================================================
+         AVISO
+    ================================================== -->
+
+    <div class="quiz-disclaimer">
+
+      <p>
+        Este teste tem caráter orientativo e não substitui
+        uma avaliação profissional de carreira.
+      </p>
+
+    </div>
+
+  </main>
+
+
+  <!-- ==================================================
+       RODAPÉ
+  ================================================== -->
+
+  <footer class="footer container">
+
+    <p>
+      © 2026 Lady Cyber
+    </p>
+
+  </footer>
+
+
+  <!-- ==================================================
+       JAVASCRIPT
+  ================================================== -->
+
+  <script src="carreira.js"></script>
+
+</body>
+
+</html>

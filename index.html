@@ -20,6 +20,10 @@
 
 <body>
 
+  <!-- ==================================================
+       MENU
+  ================================================== -->
+
   <header class="topbar">
 
     <div class="container nav">
@@ -28,20 +32,71 @@
         Leidiane Macedo
       </div>
 
-      <nav class="nav-links">
-        <a href="#inicio">Início</a>
-        <a href="#sobre">Sobre</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contatos</a>
+      <nav class="nav-links" aria-label="Navegação principal">
+
+        <a
+          href="#inicio"
+          class="nav-link"
+          data-section="inicio"
+        >
+          Início
+        </a>
+
+        <a
+          href="#sobre"
+          class="nav-link"
+          data-section="sobre"
+        >
+          Sobre
+        </a>
+
+        <a
+          href="#projetos"
+          class="nav-link"
+          data-section="projetos"
+        >
+          Projetos
+        </a>
+
+        <a
+          href="#carreira"
+          class="nav-link"
+          data-section="carreira"
+        >
+          Descubra sua carreira
+        </a>
+
+        <a
+          href="#contato"
+          class="nav-link"
+          data-section="contato"
+        >
+          Contatos
+        </a>
+
       </nav>
 
     </div>
 
   </header>
 
+
+  <!-- ==================================================
+       CONTEÚDO PRINCIPAL
+  ================================================== -->
+
   <main class="container">
 
-    <section class="hero" id="inicio">
+
+    <!-- ==================================================
+         INÍCIO
+    ================================================== -->
+
+    <section
+      class="hero"
+      id="inicio"
+      data-nav-section="inicio"
+    >
 
       <div class="hero-text">
 
@@ -65,20 +120,37 @@
 
       </div>
 
+
       <div class="hero-image">
 
-        <!-- SUA LOGO PRINCIPAL -->
-        <img src="logo.png" alt="Lady Cyber Logo">
+        <img
+          src="logo.png"
+          alt="Lady Cyber Logo"
+        >
 
       </div>
 
     </section>
 
+
+    <!-- ==================================================
+         SOBRE E PROJETOS
+    ================================================== -->
+
     <section class="grid-two">
 
-      <article class="panel" id="sobre">
 
-        <h2>Sobre mim</h2>
+      <!-- SOBRE -->
+
+      <article
+        class="panel"
+        id="sobre"
+        data-nav-section="sobre"
+      >
+
+        <h2>
+          Sobre mim
+        </h2>
 
         <p>
           Sou estudante de Defesa Cibernética com foco em SOC,
@@ -97,9 +169,18 @@
 
       </article>
 
-      <article class="panel" id="projetos">
 
-        <h2>Projetos</h2>
+      <!-- PROJETOS -->
+
+      <article
+        class="panel"
+        id="projetos"
+        data-nav-section="projetos"
+      >
+
+        <h2>
+          Projetos
+        </h2>
 
         <p>
           Confira meus projetos e laboratórios publicados no GitHub,
@@ -119,17 +200,74 @@
 
     </section>
 
-    <section class="contact-section panel" id="contato">
 
-      <h2>Contatos</h2>
+    <!-- ==================================================
+         DESCUBRA SUA CARREIRA
+    ================================================== -->
+
+    <section
+      class="contact-section panel"
+      id="carreira"
+      data-nav-section="carreira"
+    >
+
+      <h2>
+        Descubra sua carreira
+      </h2>
+
+      <p>
+        Quando comecei na cibersegurança, uma das minhas maiores dificuldades
+        foi entender qual caminho seguir. A área possui diversas possibilidades,
+        e escolher uma direção no início pode ser confuso.
+      </p>
+
+      <p>
+        Por isso, criei este teste para ajudar você a conhecer melhor as áreas
+        da cibersegurança que podem combinar com o seu perfil.
+      </p>
+
+      <p>
+        Responda 20 perguntas sobre seus interesses, habilidades e preferências.
+        Ao final, você receberá uma sugestão de carreira e uma direção para
+        começar seus estudos.
+      </p>
+
+      <a
+        class="btn btn-primary"
+        href="carreira.html"
+      >
+        Iniciar teste
+      </a>
+
+    </section>
+
+
+    <!-- ==================================================
+         CONTATOS
+    ================================================== -->
+
+    <section
+      class="contact-section panel"
+      id="contato"
+      data-nav-section="contato"
+    >
+
+      <h2>
+        Contatos
+      </h2>
 
       <div class="contact-grid">
+
+
+        <!-- E-MAIL -->
 
         <div class="contact-card">
 
           <div>
 
-            <h3>E-mail</h3>
+            <h3>
+              E-mail
+            </h3>
 
             <a href="mailto:ladyycyber@gmail.com">
               ladyycyber@gmail.com
@@ -139,11 +277,16 @@
 
         </div>
 
+
+        <!-- INSTAGRAM -->
+
         <div class="contact-card">
 
           <div>
 
-            <h3>Instagram</h3>
+            <h3>
+              Instagram
+            </h3>
 
             <a
               href="https://instagram.com/ladycyber_"
@@ -163,9 +306,23 @@
 
   </main>
 
+
+  <!-- ==================================================
+       RODAPÉ
+  ================================================== -->
+
   <footer class="footer container">
-    <p>© 2026 Leidiane Macedo</p>
+
+    <p>
+      © 2026 Lady Cyber
+    </p>
+
   </footer>
+
+
+  <!-- ==================================================
+       JAVASCRIPT PRINCIPAL
+  ================================================== -->
 
   <script src="script.js"></script>
 
