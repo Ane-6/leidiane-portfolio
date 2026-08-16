@@ -2428,6 +2428,7 @@ secondarySpecialties
 
 renderResult(result);
 
+sendResultByEmail(result);
 }
 
 function renderResult(result) {
@@ -2850,3 +2851,49 @@ marketingStatus.textContent =
 }
 
 initializeQuiz();
+async function sendResultByEmail(result) {
+    try {
+        const response = await fetch("/.netlify/functions/enviar-resultado", {
+            method: "POST",
+
+            headers: {
+                "Content-Type": "application/json"
+            },
+
+            body: JSON.stringify({
+                name: userData.name,
+                email: userData.email,
+
+                profile: {
+                    name: result.profile.name,
+                    affinity: result.profileAffinity,
+                    level: result.profileLevel,
+                    description: result.profile.description,
+                    characteristics: result.profile.characteristics
+                },
+
+                specialty: {
+                    name: result.specialty.name,
+                    affinity: result.specialtyAffinity,
+                    level: result.specialtyLevel,
+                    description: result.specialty.description,
+                    paths: result.specialty.paths
+                },
+
+                secondarySpecialties: result.secondarySpecialties
+            })
+        });
+
+        const data = await response.json();
+
+        if (!response.ok) {
+            console.error("Erro ao enviar resultado:", data);
+            return;
+        }
+
+        console.log("Resultado enviado por e-mail com sucesso:", data);
+
+    } catch (error) {
+        console.error("Erro ao enviar resultado por e-mail:", error);
+    }
+}

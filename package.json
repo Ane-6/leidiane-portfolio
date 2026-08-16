@@ -1,0 +1,25 @@
+{
+  "name": "leidiane-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "carreira.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ane-6/leidiane-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Ane-6/leidiane-portfolio/issues"
+  },
+  "homepage": "https://github.com/Ane-6/leidiane-portfolio#readme",
+  "dependencies": {
+    "pdf-lib": "^1.17.1",
+    "resend": "^6.20.0"
+  }
+}
