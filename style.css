@@ -2106,3 +2106,73 @@ button:focus-visible {
     animation-iteration-count: 1 !important;
   }
 }
+
+/* =========================================================
+   AJUSTE FINAL — TEXTOS JUSTIFICADOS
+   PRESERVA TODO O DESIGN ORIGINAL
+========================================================= */
+
+/* HOME — SOBRE, PROJETOS E CARREIRA */
+
+.content-text,
+.panel p,
+#carreira p {
+  text-align: justify;
+  text-align-last: left;
+
+  hyphens: auto;
+  -webkit-hyphens: auto;
+
+  word-spacing: normal;
+  overflow-wrap: break-word;
+}
+
+
+/* PÁGINA DO TESTE — TEXTOS PRINCIPAIS */
+
+.carreira-intro p,
+.identification-description,
+#profile-description,
+#specialty-description,
+.result-explanation p,
+.result-info p,
+.result-delivery-info p {
+  text-align: justify;
+  text-align-last: left;
+
+  hyphens: auto;
+  -webkit-hyphens: auto;
+
+  word-spacing: normal;
+  overflow-wrap: break-word;
+}
+
+
+/* =========================================================
+   MOBILE — MANTER TEXTOS JUSTIFICADOS
+========================================================= */
+
+@media (max-width: 640px) {
+
+  .content-text,
+  .hero-text p,
+  .panel p,
+  #carreira p,
+  .carreira-intro p,
+  .identification-description,
+  #profile-description,
+  #specialty-description,
+  .result-explanation p,
+  .result-info p,
+  .result-delivery-info p {
+    text-align: justify;
+    text-align-last: left;
+
+    hyphens: auto;
+    -webkit-hyphens: auto;
+
+    word-spacing: normal;
+    overflow-wrap: break-word;
+  }
+
+}
